@@ -1,7 +1,7 @@
 {
   "name": "@datadayrepos/tinycolor",
   "type": "module",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.11",
   "private": false,
   "packageManager": "pnpm@8.9.0",
   "description": "Tinycolor in ts wo external dependencies.",
@@ -15,15 +15,14 @@
   "bugs": {
     "url": "https://github.com/datadayrepos/dataday-tinycolor/issues"
   },
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
     }
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist",
@@ -35,7 +34,7 @@
     "release": "bumpp -r && pnpm -r publish",
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": "vite build && tsc --emitDeclarationOnly",
     "pub": "npm publish --access public"
   },
   "devDependencies": {
@@ -47,7 +46,8 @@
     "eslint-plugin-sort-keys": "^2.3.5",
     "lint-staged": "^14.0.1",
     "pnpm": "^8.8.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue,md}": [
