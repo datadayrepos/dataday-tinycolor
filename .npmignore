@@ -1,0 +1,18 @@
+# Source-root safety marker. scripts/npm-package.mjs enforces the archive boundary.
+**
+!dist/
+!dist/**/
+!dist/**/*.js
+!dist/**/*.mjs
+!dist/**/*.cjs
+!dist/**/*.d.ts
+!dist/**/*.d.mts
+!dist/**/*.d.cts
+!dist/**/*.css
+!dist/**/*.json
+!dist/**/*.wasm
+!package.json
+!LICENSE
+!LICENSE.md
+!LICENCE
+!NOTICE
