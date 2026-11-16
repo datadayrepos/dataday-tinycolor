@@ -62,14 +62,14 @@ pnpm run pub
 
 
 ## 📦 Template Structure
-```json
+```jsonc
 {
   "name": "__PACKAGE_NAME__",
   "type": "module",
   "version": "0.0.1",
   "private": true,
   "description": "__PACKAGE_DESCRIPTION__",
-  ...
+  // ...
   "scripts": {
     "lint": "eslint --cache .",
     "lint:fix": "eslint . --fix",
@@ -78,10 +78,9 @@ pnpm run pub
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "pub": "npm publish --access public"
-  },
-  ...
+  }
+  // ...
 }
-
 ```
 
 ## 🗂️ File Structure
